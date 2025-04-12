@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+</head>
+<body>
+ <!--WAP to create calculator by using function-->
+  <script>
+    function calculator() {
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let operator = prompt("Enter operator (+, -, *, /):");
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      let result;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Invalid number input.");
+        return;
+      }
+
+      switch(operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            alert("Cannot divide by zero.");
+            return;
+          }
+          result = num1 / num2;
+          break;
+        default:
+          alert("Invalid operator.");
+          return;
+      }
+
+      alert("Result: " + result);
+    }
+
+    // Call the calculator function
+    calculator();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPT OBJECT CONSTRUCTOR</h1>
+
+<p id="demo"></p>
+
+<script>
+function person(first, last, age, eye){
+  this.firstName= "John";
+  this.lastName = "Doe";
+  this.age      =  50;
+  this.eyecolor= "blue";
+};
+
+const myFather = new person("Dharmendra","Kumar","50","blue");
+document.getElementById("demo").innerHTML = "My father is " + myFather.age + ".";
+</script>
+</body>
+</html>

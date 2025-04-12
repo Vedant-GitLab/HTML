@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    function banking(){
+        let account = Number(prompt("Enter account no. "))
+        if(account == 1234567890){
+            alert("Here is your OTP : 4567")
+            let otp = Number(prompt("Enter otp : "))
+            if(otp == 4567){
+                let transactionammount = Number(prompt("Enter amount"))
+                if(transactionammount >= 1){
+                    alert("Transaction Claimed")
+                }
+                else{
+                    alert("Not Done !!")
+                }
+            }
+            else{
+                alert("Wrong otp ")
+            }
+        }
+        else{
+            alert("Invalid Account no.")
+        }
+        
+        
+    }
+    
+    
+</script>
+<body>
+    <button class="Click Here" onclick="banking()" >
+        Click Here
+    </button>
+    
+</body>
+</html>
